@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { getList } from "ajax";
+import List from "com/ErrorContent/index";
+import logo from "./logo.svg";
+import "./App.css";
+
+const request = async doo => {
+  const l = await getList();
+  doo(l);
+};
 
 function App() {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    request(setList);
+  }, []);
+
+  console.log("----------", list);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Error Monitor</p>
+        <List list={list} />
       </header>
     </div>
   );

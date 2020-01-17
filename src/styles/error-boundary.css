@@ -1,0 +1,19 @@
+.error-boundary {
+  width: 100%;
+  position: absolute;
+  height: calc(100% - 93px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-boundary img {
+  width: 126px;
+  margin-bottom: 20px;
+}
+
+.error-boundary p {
+  font-size: 12px;
+  color: #666;
+}
