@@ -6,7 +6,7 @@ axios.defaults.headers["Content-Type"] = "application/json";
 export const uploadError = data => {
   console.log("xxx", data);
   axios
-    .post("/upload", JSON.stringify(data))
+    .post("/errors/upload", JSON.stringify(data))
     .then(res => {
       console.log("upload res", res);
     })
@@ -17,6 +17,6 @@ export const uploadError = data => {
 
 export const getList = () =>
   axios
-    .get("/errors")
+    .get("/errors/list")
     .then(res => res.data.data)
     .catch(err => []);

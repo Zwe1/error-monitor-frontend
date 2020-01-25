@@ -13,6 +13,7 @@ function App() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
+    // throw new Error("1111");
     request(setList);
   }, []);
 
