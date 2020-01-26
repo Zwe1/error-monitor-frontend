@@ -8,7 +8,7 @@
 
 整个系统包含前端系统，source-map [插件](https://github.com/Zwe1/error-monitor-webpack-plugin) 和 [后端系统](https://github.com/Zwe1/error-monitor-node-server)，及数据库服务。前端收集上报发送错误信息到服务端，服务端处理收集存储错误信息到数据库，并支持前端获取处理后的错误信息，在前端进行集中展示。
 
-<img src='/Users/yao.zhang/Desktoperror-monitor系统架构.jpg'/>
+<img src='./src/imgs/structure.jpg'/>
 
 ### 项目表述
 
