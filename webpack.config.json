@@ -1,0 +1,64 @@
+{ mode: 'production',
+    bail: true,
+    devtool: 'source-map',
+    entry: 
+     [ '/Users/yao.zhang/Documents/lab/error-monitor/react-repo/src/index.js' ],
+    output: 
+     { path: '/Users/yao.zhang/Documents/lab/error-monitor/react-repo/build',
+       pathinfo: false,
+       filename: 'static/js/[name].[contenthash:8].js',
+       futureEmitAssets: true,
+       chunkFilename: 'static/js/[name].[contenthash:8].chunk.js',
+       publicPath: '/',
+       devtoolModuleFilenameTemplate: [Function],
+       jsonpFunction: 'webpackJsonpreact-repo',
+       globalObject: 'this' },
+    optimization: 
+     { minimize: true,
+       minimizer: [ [Object], [Object] ],
+       splitChunks: { chunks: 'all', name: false },
+       runtimeChunk: { name: [Function: name] } },
+    resolve: 
+     { modules: 
+        [ 'node_modules',
+          '/Users/yao.zhang/Documents/lab/error-monitor/react-repo/node_modules' ],
+       extensions: [ '.web.mjs', '.mjs', '.web.js', '.js', '.json', '.web.jsx', '.jsx' ],
+       alias: { 'react-native': 'react-native-web' },
+       plugins: [ [Object], [Object] ] },
+    resolveLoader: { plugins: [ [Object] ] },
+    module: 
+     { strictExportPresence: true,
+       rules: [ [Object], [Object], [Object] ] },
+    plugins: 
+     [ HtmlWebpackPlugin {
+         options: [Object],
+         childCompilerHash: undefined,
+         childCompilationOutputName: undefined,
+         assetJson: undefined,
+         hash: undefined,
+         version: 4 },
+       InlineChunkHtmlPlugin { htmlWebpackPlugin: [Object], tests: [Array] },
+       InterpolateHtmlPlugin { htmlWebpackPlugin: [Object], replacements: [Object] },
+       ModuleNotFoundPlugin {
+         appPath: '/Users/yao.zhang/Documents/lab/error-monitor/react-repo',
+         yarnLockFile: undefined,
+         useYarnCommand: [Function: bound useYarnCommand],
+         getRelativePath: [Function: bound getRelativePath],
+         prettierError: [Function: bound prettierError] },
+       DefinePlugin { definitions: [Object] },
+       MiniCssExtractPlugin { options: [Object] },
+       ManifestPlugin { opts: [Object] },
+       IgnorePlugin {
+         options: [Object],
+         checkIgnore: [Function: bound checkIgnore] },
+       GenerateSW { config: [Object] } ],
+    node: 
+     { module: 'empty',
+       dgram: 'empty',
+       dns: 'mock',
+       fs: 'empty',
+       http2: 'empty',
+       net: 'empty',
+       tls: 'empty',
+       child_process: 'empty' },
+    performance: false }

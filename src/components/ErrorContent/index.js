@@ -16,21 +16,35 @@ function List({ list }) {
           filename = "--",
           user_name = "--",
           tenant = "--",
+          sourcemap = "{}",
           message,
           stack
         }) => {
           const content = stack.replace(/\sat/g, `<br/>at`);
+          const {
+            source,
+            line: sline = "--",
+            column: scolumn = "--",
+            sname = "--"
+          } = JSON.parse(sourcemap);
+
           return (
             <li key={id}>
               <div>错误文件名: {filename}</div>
               <div>
-                行号: {line}; 列号: {col};
+                行号: {line || "--"}; 列号: {col || "--"};
               </div>
               <div>
                 用户名: {user_name}; 租户: {tenant}
               </div>
               <div>
                 <div>错误: {message}</div>
+                {source && (
+                  <div>
+                    错误原始文件：{source}, 错误行：{sline}, 错误列: {scolumn},
+                    名称:{sname}
+                  </div>
+                )}
                 <div
                   dangerouslySetInnerHTML={{
                     __html: `堆栈信息: ${content}`

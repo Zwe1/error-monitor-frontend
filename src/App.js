@@ -4,20 +4,18 @@ import List from "com/ErrorContent/index";
 import logo from "./logo.svg";
 import "./App.css";
 
-const request = async doo => {
-  const l = await getList();
-  doo(l);
+const request = async setList => {
+  const list = await getList();
+  setList(list);
 };
 
 function App() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    // throw new Error("1111");
+    // throw new Error("use source map");
     request(setList);
   }, []);
-
-  console.log("----------", list);
 
   return (
     <div className="App">
