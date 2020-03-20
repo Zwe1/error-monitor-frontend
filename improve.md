@@ -22,6 +22,8 @@ window.addEventListener("unhandledrejection", function(e) {
 
 3. 拦截跨域错误
 
+在跨域请求的 script 标签上设置 crossorigin 属性。或者将跨域资源转换为同源资源。
+
 #### 批量上传
 
 1. 实现消息批量
@@ -38,6 +40,10 @@ window.addEventListener("unhandledrejection", function(e) {
 可使用浏览器缓存机制，在上传错误信息时，先进行一次缓存，当上传成功后，清除缓存。如在用户再次打开浏览器时，发现缓存中存在错误信息，则进行一次重传，以保障信息被准确捕捉和存储。
 
 ### 后端优化
+
+#### 使用 redis
+
+通过 redis 做后端数据缓存，减少数据库读写开销。
 
 #### 支持高并发
 
